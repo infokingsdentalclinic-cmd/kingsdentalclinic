@@ -144,6 +144,7 @@ p  { color: var(--gray-600); line-height: 1.7; }
   text-transform: uppercase; margin-bottom: 28px;
 }
 .hero-content h1 { margin-bottom: 20px; }
+.hero-content h1 em { font-style: italic; display: inline-block; transform: skewX(-12deg); }
 .hero-content > p { font-size: 1.05rem; max-width: 480px; margin-bottom: 40px; }
 .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-image {

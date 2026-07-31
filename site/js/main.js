@@ -48,20 +48,33 @@ if (floatClose) {
   });
 }
 
-// Contact form submission (basic — wire up to a backend or Netlify Forms as needed)
+// Contact form submission — sends to Netlify Forms (notifications configured in Netlify dashboard)
 const form = document.querySelector('form[name="contact"]');
 if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Message sent!';
+    const originalText = btn.textContent;
     btn.disabled = true;
-    btn.style.background = 'var(--green)';
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      btn.style.background = '';
-      form.reset();
-    }, 4000);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => {
+        btn.textContent = 'Message sent!';
+        btn.style.background = 'var(--green)';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          btn.style.background = '';
+          form.reset();
+        }, 4000);
+      })
+      .catch(() => {
+        btn.textContent = 'Something went wrong — please call us';
+        btn.disabled = false;
+      });
   });
 }

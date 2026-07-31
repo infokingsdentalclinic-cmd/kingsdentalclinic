@@ -116,7 +116,9 @@
       <!-- CONTACT FORM -->
       <div class="fade-in">
         <h2 style="margin-bottom:36px; font-size:1.8rem;">Send a message</h2>
-        <form class="contact-form" name="contact" method="POST" action="#">
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="form-note" style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
           <div class="form-row">
             <div class="form-group">
               <label for="first-name">First Name</label>

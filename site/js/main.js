@@ -62,7 +62,8 @@ if (form) {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(new FormData(form)).toString(),
     })
-      .then(() => {
+      .then((res) => {
+        if (!res.ok) throw new Error('Form submission failed: ' + res.status);
         btn.textContent = 'Message sent!';
         btn.style.background = 'var(--green)';
         setTimeout(() => {
@@ -71,6 +72,54 @@ if (form) {
           btn.style.background = '';
           form.reset();
         }, 4000);
+      })
+      .catch(() => {
+        btn.textContent = 'Something went wrong — please call us';
+        btn.disabled = false;
+      });
+  });
+}
+
+// Pricing page email gate — unlocks fee guide + PDF download,
+// notifies the clinic via Netlify Forms (same mechanism as the contact form).
+const pricingGate = document.getElementById('pricingGate');
+const pricingContent = document.getElementById('pricingContent');
+const pricingForm = document.querySelector('form[name="price-list-request"]');
+
+function unlockPricing() {
+  if (pricingGate) pricingGate.style.display = 'none';
+  if (pricingContent) pricingContent.style.display = '';
+}
+
+if (pricingGate && pricingContent) {
+  try {
+    if (localStorage.getItem('kdc_pricing_unlocked') === 'true') {
+      unlockPricing();
+    }
+  } catch (err) {
+    // localStorage unavailable (private browsing etc.) — gate stays visible, which is fine.
+  }
+}
+
+if (pricingForm) {
+  pricingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = pricingForm.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Loading…';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(pricingForm)).toString(),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error('Form submission failed: ' + res.status);
+        try { localStorage.setItem('kdc_pricing_unlocked', 'true'); } catch (err) {}
+        btn.textContent = originalText;
+        btn.disabled = false;
+        unlockPricing();
       })
       .catch(() => {
         btn.textContent = 'Something went wrong — please call us';

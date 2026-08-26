@@ -60,7 +60,7 @@
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
       </div>
       <h2 style="font-size:1.5rem; margin-bottom:8px;">See our full fee guide</h2>
-      <p style="color:var(--gray-400); font-size:0.95rem;">Pop in your name and email for instant access to our complete 2026 price list, plus a downloadable PDF copy for your records.</p>
+      <p style="color:var(--gray-400); font-size:0.95rem;">Pop in your details for instant access to our complete 2026 price list, plus a downloadable PDF copy for your records.</p>
       <form class="contact-form" name="price-list-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#">
         <input type="hidden" name="form-name" value="price-list-request">
         <p class="form-note" style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
@@ -72,9 +72,13 @@
           <label for="pl-email">Email Address</label>
           <input type="email" id="pl-email" name="email" placeholder="jane@example.com" required>
         </div>
+        <div class="form-group">
+          <label for="pl-phone">Mobile Number</label>
+          <input type="tel" id="pl-phone" name="phone" placeholder="04xx xxx xxx" required>
+        </div>
         <button type="submit" class="btn btn-primary btn-lg" style="align-self:flex-start;">View Pricing</button>
       </form>
-      <p class="pricing-unlocked-note">We'll never share your email. You can also just call us on <a href="tel:0393646156">(03) 9364 6156</a>.</p>
+      <p class="pricing-unlocked-note">We'll never share your details. You can also just call us on <a href="tel:0393646156">(03) 9364 6156</a>.</p>
       <noscript><p class="pricing-unlocked-note">This form needs JavaScript enabled to unlock pricing instantly — please call us instead on <a href="tel:0393646156">(03) 9364 6156</a>.</p></noscript>
     </div>
 

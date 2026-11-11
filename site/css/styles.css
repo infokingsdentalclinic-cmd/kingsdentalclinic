@@ -709,5 +709,19 @@ a.service-card {
 }
 
 /* Show a photo-split image uncropped, at its natural proportions */
-.photo-split-img--full { height: auto; }
-.photo-split-img--full img { height: auto; object-fit: contain; display: block; }
+.photo-split-img--full { height: auto; overflow: visible; }
+.photo-split-img--full img { height: auto; object-fit: contain; display: block; border-radius: var(--radius); }
+.photo-caption { margin-top: 14px; font-size: 0.95rem; font-style: italic; letter-spacing: 0.02em; color: var(--green); }
+
+/* Our Story: tall crop favouring the right side of the photo (shows the clinic sign) */
+.photo-split-img--crop-right img { height: 560px; object-fit: cover; object-position: 80% center; }
+@media (max-width: 900px) { .photo-split-img--crop-right img { height: auto; } }
+
+/* Services page: leave room for the sticky nav when jumping to a service */
+.service-list-item { scroll-margin-top: 110px; }
+
+/* Inside the clinic gallery: tall feature tile (reception sign) */
+.photo-gallery--feature .photo-gallery-item--tall { grid-row: span 2; height: auto; min-height: 496px; }
+.photo-gallery--feature .photo-gallery-item--tall img { object-position: center 18%; }
+@media (min-width: 1025px) { .photo-gallery--feature .photo-gallery-item:last-child { grid-column: span 2; } }
+@media (max-width: 768px) { .photo-gallery--feature .photo-gallery-item--tall { grid-row: auto; min-height: 0; height: 420px; } }

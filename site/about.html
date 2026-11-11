@@ -19,7 +19,12 @@
         <img src="assets/logo.png" alt="Kings Dental Clinic"></a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+        <li class="has-dropdown">
+          <a href="about.html" class="active">About</a>
+          <ul class="dropdown">
+            <li><a href="team.html">Our Team</a></li>
+          </ul>
+        </li>
         <li><a href="services.html">Services</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -34,6 +39,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
+    <a class="sub" href="team.html">Our Team</a>
     <a href="services.html">Services</a>
     <a href="pricing.html">Pricing</a>
     <a href="contact.html">Contact</a>
@@ -104,22 +110,42 @@
 </section>
 
 <!-- MEET THE TEAM -->
-<section class="section bg-white">
+<section class="section bg-white" id="team">
   <div class="container">
     <div class="section-header fade-in">
       <span class="section-label">Our Team</span>
-      <h2>Meet your dentist</h2>
+      <h2>Meet your dentists</h2>
       <p>Our experienced team is dedicated to making every visit as comfortable and effective as possible.</p>
     </div>
-    <div style="max-width:380px;">
-      <div class="team-card fade-in">
+    <div class="team-grid">
+      <div class="team-card fade-in" id="dr-manpreet">
         <div class="team-card-img">
-          <img src="assets/images/dental-room-2.jpg" alt="Dr. Jasdeep Kaur — Principal Dentist">
+          <img src="assets/images/dr-manpreet.jpg" alt="Dr. Manpreet — Dentist" style="object-position:center 20%">
         </div>
         <div class="team-card-body">
-          <h3>Dr. Jasdeep Kaur</h3>
-          <div class="team-card-role">Principal Dentist</div>
-          <p>Dr. Kaur is a compassionate and highly skilled general dentist with a passion for preventive care and cosmetic dentistry. She takes pride in building long-term relationships with her patients and making dentistry a positive experience for everyone.</p>
+          <h3>Dr. Manpreet</h3>
+          <div class="team-card-role">Dentist</div>
+          <a class="team-card-link" href="dr-manpreet.html">View profile &rarr;</a>
+        </div>
+      </div>
+      <div class="team-card fade-in" id="dr-alex">
+        <div class="team-card-img">
+          <img src="assets/images/dr-alex.jpg" alt="Dr. Alex — Dentist" style="object-position:center 20%">
+        </div>
+        <div class="team-card-body">
+          <h3>Dr. Alex</h3>
+          <div class="team-card-role">Dentist</div>
+          <a class="team-card-link" href="dr-alex.html">View profile &rarr;</a>
+        </div>
+      </div>
+      <div class="team-card fade-in" id="dr-saloni">
+        <div class="team-card-img">
+          <img src="assets/images/dr-saloni.jpg" alt="Dr. Saloni — Dentist" style="object-position:center 20%">
+        </div>
+        <div class="team-card-body">
+          <h3>Dr. Saloni</h3>
+          <div class="team-card-role">Dentist</div>
+          <a class="team-card-link" href="dr-saloni.html">View profile &rarr;</a>
         </div>
       </div>
     </div>

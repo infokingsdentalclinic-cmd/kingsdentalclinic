@@ -682,3 +682,32 @@ a.service-card {
 .team-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
 .team-card-link { display: inline-block; margin-top: 14px; font-size: 0.875rem; font-weight: 500; color: var(--green); }
 .team-card-link::after { content: ''; position: absolute; inset: 0; }
+
+/* Floating CTA: receptionist avatar */
+.float-cta-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; padding-right: 22px; }
+.float-cta-head .float-cta-title { margin-bottom: 0; }
+.float-cta-avatar { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--green-light); }
+
+/* Contact page header: big photo that blends into the title */
+.page-header--split { position: relative; overflow: hidden; min-height: 520px; display: flex; align-items: center; }
+.page-header--split > .container { width: 100%; display: block; }
+.page-header-text { position: relative; z-index: 2; }
+.page-header-text p { font-size: 1.05rem; max-width: 460px; }
+.page-header-img {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 58%; z-index: 1;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 42%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 42%);
+}
+.page-header-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; display: block; }
+@media (max-width: 768px) {
+  .page-header--split { display: block; min-height: 0; padding-top: 56px; }
+  .page-header-img {
+    position: relative; width: auto; height: 280px; margin-top: 32px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 30%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 30%);
+  }
+}
+
+/* Show a photo-split image uncropped, at its natural proportions */
+.photo-split-img--full { height: auto; }
+.photo-split-img--full img { height: auto; object-fit: contain; display: block; }

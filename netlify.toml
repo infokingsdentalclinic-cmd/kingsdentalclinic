@@ -7,3 +7,14 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# The About page was renamed to Our Story
+[[redirects]]
+  from = "/about"
+  to = "/our-story"
+  status = 301
+
+[[redirects]]
+  from = "/about.html"
+  to = "/our-story"
+  status = 301

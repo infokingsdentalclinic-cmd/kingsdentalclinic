@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Sample illustration: teeth before composite veneers">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efe1d8"/><stop offset="1" stop-color="#dfc9bd"/></linearGradient>
+    <clipPath id="m"><path d="M50 140 Q200 50 350 140 Q200 240 50 140Z"/></clipPath>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <path d="M30 140 Q200 30 370 140 Q200 265 30 140Z" fill="#bf6d75"/>
+  <path d="M50 140 Q200 50 350 140 Q200 240 50 140Z" fill="#4a2326"/>
+  <g clip-path="url(#m)" stroke="#c4b583" stroke-width="1.2">
+    <!-- lower teeth -->
+    <rect x="124" y="168" width="30" height="40" rx="8" fill="#e0d3a4"/>
+    <rect x="158" y="169" width="28" height="40" rx="8" fill="#e4d8ab"/>
+    <rect x="190" y="168" width="28" height="40" rx="8" fill="#e0d3a4"/>
+    <rect x="222" y="169" width="28" height="40" rx="8" fill="#e4d8ab"/>
+    <!-- upper teeth: chipped edge, small gap between centrals, slight discolouration -->
+    <rect x="102" y="70" width="28" height="76" rx="9" fill="#e9dfb6"/>
+    <rect x="134" y="70" width="30" height="82" rx="9" fill="#ece3bd"/>
+    <path d="M168 70 H199 V150 L190 156 L184 150 L176 160 L168 152 Z" fill="#e6dbb0"/>
+    <rect x="208" y="70" width="31" height="88" rx="10" fill="#ece3bd"/>
+    <rect x="243" y="70" width="28" height="82" rx="9" fill="#e9dfb6"/>
+    <rect x="275" y="70" width="26" height="74" rx="9" fill="#e6dbb0"/>
+    <!-- gap between central incisors -->
+    <rect x="199" y="70" width="9" height="95" fill="#4a2326" stroke="none"/>
+  </g>
+  <text x="200" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="rgba(0,0,0,0.35)">SAMPLE IMAGE</text>
+</svg>

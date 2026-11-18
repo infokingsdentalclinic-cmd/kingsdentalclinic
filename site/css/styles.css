@@ -737,6 +737,31 @@ a.service-card {
   .profile-faded-bg { bottom: auto; height: 720px; }
 }
 
+/* Dentist profile: before & after gallery strip */
+.ba-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.ba-card {
+  background: var(--white); border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); margin: 0;
+}
+.ba-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--gray-200); }
+.ba-img { position: relative; line-height: 0; }
+.ba-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.ba-tag {
+  position: absolute; top: 12px; left: 12px; line-height: 1;
+  background: rgba(26,26,26,0.78); color: #fff; font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px;
+}
+.ba-tag--after { background: var(--green); }
+.ba-card figcaption { padding: 18px 22px 20px; display: flex; flex-direction: column; gap: 4px; }
+.ba-card figcaption strong { font-size: 1rem; color: var(--black); }
+.ba-card figcaption span { font-size: 0.875rem; color: var(--gray-600); }
+.ba-note { margin-top: 24px; font-size: 0.8rem; color: var(--gray-400); }
+@media (max-width: 900px) {
+  /* swipeable strip on small screens */
+  .ba-strip { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
+  .ba-card { flex: 0 0 88%; scroll-snap-align: start; }
+}
+
 /* Services page: leave room for the sticky nav when jumping to a service */
 .service-list-item { scroll-margin-top: 110px; }
 

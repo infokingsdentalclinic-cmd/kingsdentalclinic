@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Sample illustration: teeth before porcelain veneers">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1e3da"/><stop offset="1" stop-color="#e2cdc1"/></linearGradient>
+    <clipPath id="m"><path d="M50 140 Q200 50 350 140 Q200 240 50 140Z"/></clipPath>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <path d="M30 140 Q200 30 370 140 Q200 265 30 140Z" fill="#c4727a"/>
+  <path d="M50 140 Q200 50 350 140 Q200 240 50 140Z" fill="#4a2326"/>
+  <g clip-path="url(#m)" stroke="#bfae7c" stroke-width="1.2">
+    <!-- lower teeth -->
+    <rect x="122" y="168" width="30" height="40" rx="8" fill="#d2c394"/>
+    <rect x="156" y="170" width="28" height="40" rx="8" fill="#d6c898"/>
+    <rect x="188" y="168" width="26" height="40" rx="8" fill="#d2c394"/>
+    <rect x="220" y="171" width="30" height="40" rx="8" fill="#d6c898"/>
+    <!-- upper teeth: uneven length, gaps, yellowed -->
+    <rect x="96" y="70" width="26" height="72" rx="9" fill="#dccfa2"/>
+    <rect x="128" y="70" width="29" height="82" rx="9" fill="#e1d5aa"/>
+    <rect x="162" y="70" width="34" height="90" rx="10" fill="#dccfa2"/>
+    <rect x="204" y="70" width="31" height="84" rx="10" fill="#e1d5aa"/>
+    <rect x="244" y="70" width="27" height="76" rx="9" fill="#d8caa0"/>
+    <rect x="280" y="70" width="24" height="68" rx="9" fill="#dccfa2"/>
+  </g>
+  <text x="200" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="rgba(0,0,0,0.35)">SAMPLE IMAGE</text>
+</svg>

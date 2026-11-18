@@ -171,7 +171,7 @@ p  { color: var(--gray-600); line-height: 1.7; }
   border-radius: var(--radius); overflow: hidden;
   height: 560px; position: relative;
 }
-.hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 92%; transform: scale(1.2); transform-origin: 40% 95%; }
 .hero-badge {
   position: absolute; bottom: 24px; left: 24px;
   background: var(--white); border-radius: var(--radius-sm);

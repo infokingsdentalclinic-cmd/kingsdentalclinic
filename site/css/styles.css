@@ -771,6 +771,9 @@ a.service-card {
 @media (min-width: 1025px) { .photo-gallery--feature .photo-gallery-item:last-child { grid-column: span 2; } }
 @media (max-width: 768px) { .photo-gallery--feature .photo-gallery-item--tall { grid-row: auto; min-height: 0; height: 420px; } }
 
+/* Slight zoom on a portrait, centred on the face (parent already clips overflow) */
+.img-zoom-face { transform: scale(1.25); transform-origin: 55% 30%; }
+
 /* Gallery with a single photo: centred, natural proportions */
 .photo-gallery--single { grid-template-columns: minmax(0, 480px); justify-content: center; }
 .photo-gallery--single .photo-gallery-item--tall { grid-row: auto; min-height: 0; height: auto; }

@@ -772,8 +772,8 @@ a.service-card {
 @media (max-width: 768px) { .photo-gallery--feature .photo-gallery-item--tall { grid-row: auto; min-height: 0; height: 420px; } }
 
 /* Taller photo frame: shows more of a portrait (a "zoomed out" crop) */
-.photo-split-img--tall { height: 620px; }
-@media (max-width: 900px) { .photo-split-img--tall { height: 420px; } }
+.photo-split-img--tall { height: 720px; }
+@media (max-width: 900px) { .photo-split-img--tall { height: 480px; } }
 
 /* Slight zoom on a portrait, centred on the face (parent already clips overflow) */
 .img-zoom-face { transform: scale(1.5); transform-origin: 48% 28%; }

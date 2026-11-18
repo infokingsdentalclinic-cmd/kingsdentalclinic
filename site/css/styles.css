@@ -717,6 +717,24 @@ a.service-card {
 .photo-split-img--crop-right img { height: 560px; object-fit: cover; object-position: 80% center; }
 @media (max-width: 900px) { .photo-split-img--crop-right img { height: auto; } }
 
+/* Dentist profile: faded photo backdrop behind the profile section */
+.profile-faded { position: relative; overflow: hidden; }
+.profile-faded > .container { position: relative; z-index: 1; }
+.profile-faded-bg { position: absolute; inset: 0; display: flex; pointer-events: none; z-index: 0; }
+.profile-faded-bg img {
+  flex: 1 1 0; min-width: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 25%; opacity: 0.11;
+}
+/* fade the top and bottom edges into the white page */
+.profile-faded-bg::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0) 18%, rgba(255,255,255,0) 82%, #fff 100%);
+}
+@media (max-width: 900px) {
+  .profile-faded-bg { bottom: auto; height: 720px; }
+  .profile-faded-bg img:nth-child(n+3) { display: none; }
+}
+
 /* Services page: leave room for the sticky nav when jumping to a service */
 .service-list-item { scroll-margin-top: 110px; }
 
